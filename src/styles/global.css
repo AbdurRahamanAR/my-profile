@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "iceberg";
+  src: url("/iceberg-Regular.ttf");
+  font-display: swap;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: iceberg, sans-serif;
+  margin: auto;
+  padding: 0px;
+  max-width: 1100px;
+  text-align: left;
+  background-color: #fff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #000;
+  font-size: 1.6rem;
+}

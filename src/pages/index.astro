@@ -1,0 +1,78 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.avaterImg {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				border: 3px solid #000000;
+				object-fit: cover;
+			}
+
+			.introInfoBox {
+				display: flex;
+				padding: 21px 23px 0px;
+			}
+
+			.bioText {
+				margin: 18px 24px 28px;
+				line-height: 1.5rem;
+			}
+
+			.dividedLine {
+				background-color: rgba(52, 203, 121, 0.68);
+				height: 15px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<div class="introInfoBox" title="Intro Info">
+			<img class="avaterImg" src="/avater.webp" title="Abdur Rahaman" />
+			<div>
+				<h6 style="font-size: 2.4rem; line-height: 3rem; font-weight: 400;">
+					HEY, It's me,
+				</h6>
+				<div style="margin-left: 11px; margin-top: 9px">
+					<h6 style="font-size: 1.6rem; font-weight: 400; line-height: 2rem;">
+						ABDUR RAHAMAN
+					</h6>
+					<p style="font-size: 1.2rem; font-weight: 400; line-height: 15px;">Front end dev at KImp.io</p>
+				</div>
+			</div>
+		</div>
+
+		<p class="bioText">
+			A good father , husbend (trying) and developer want to keep a good infact on earth. 
+		</p>
+
+		<div class="dividedLine" />
+
+		<div class="socialLinks">
+			<p>Find me on,</p>
+			<ul>
+				<li>
+					<a>Email</a>
+				</li>
+				<li>
+					<a>Twitter</a>
+				</li>
+				<li>
+					<a>Facebook</a>
+				</li>
+			</ul>
+		</div>
+			
+		<Footer />
+	</body>
+</html>

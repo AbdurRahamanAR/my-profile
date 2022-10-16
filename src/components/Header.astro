@@ -1,0 +1,22 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<header>
+	<button class="noStyleButton">
+		<img style="width: 25px;height:25px;" src="/night-mode.svg" alt="Toggle Night mode" />
+	</button>
+</header>
+<style>
+	header {
+		display: flex;
+		justify-content: flex-end;
+		padding: 23px;
+	}
+
+	.noStyleButton {
+		background-color: transparent;
+		border: none;
+	}
+</style>
