@@ -43,9 +43,11 @@ jobs:
         id: pnpm-install
         with:
           version: 7
+          run_install: true
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+
       - name: Build with Astro
         run: |
           pnpm astro build \
