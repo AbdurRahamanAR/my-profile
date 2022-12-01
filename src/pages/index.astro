@@ -9,33 +9,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.avaterImg {
-				width: 100px;
-				height: 100px;
-				border-radius: 50%;
-				border: 3px solid #000000;
-				object-fit: cover;
-			}
-
-			.introInfoBox {
-				display: flex;
-				padding: 21px 23px 0px;
-			}
-
-			.bioText {
-				margin: 18px 24px 28px;
-				line-height: 1.5rem;
-			}
-
-			.dividedLine {
-				background-color: rgba(52, 203, 121, 0.68);
-				height: 15px;
-				width: 100%;
-			}
+		<style> 
 		</style>
 	</head>
-	<body>
+	<body class="dark:bg-slate-800">
 		<Header title={SITE_TITLE} />
 		<div class="introInfoBox" title="Intro Info">
 			<img class="avaterImg" src="/avater.webp" title="Abdur Rahaman" />
