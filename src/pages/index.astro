@@ -2,7 +2,13 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import TimeWast from '../components/TimeWast';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+const mockBlogsList =[1, 2, 3].map(item=>({
+		title: `My blog ${item}`,
+		content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+	}))
 ---
 
 <!DOCTYPE html>
@@ -14,8 +20,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	</head>
 	<body class="dark:bg-slate-800 dark:text-white bg-white text-black">
 		<Header title={SITE_TITLE} />
-		<div class="p-6 flex " title="Intro Info">
-			<img class="rounded-full w-28 h-28" src="/avater.webp" title="Abdur Rahaman" />
+		<div class="p-6 pt-0 flex " title="Intro Info">
+			<div class="rounded-full border-[3px]  border-black w-28 h-28 overflow-hidden">
+				<img class=" w-full h-100 object-cover" src="/avater.webp" title="Abdur Rahaman" />
+			</div>
 			<div>
 				<h6 style="font-size: 2.4rem; line-height: 3rem; font-weight: 400;">
 					HEY, It's me,
@@ -24,32 +32,49 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					<h6 style="font-size: 1.6rem; font-weight: 400; line-height: 2rem;">
 						ABDUR RAHAMAN
 					</h6>
-					<p style="font-size: 1.2rem; font-weight: 400; line-height: 15px;">Front end dev at KImp.io</p>
+					<p style="font-size: 1.2rem; font-weight: 400;  line-height: 15px;">Front end dev at KImp.io</p>
 				</div>
 			</div>
 		</div>
 
-		<p class="bioText border-b-[15px]">
+		<p class="text-xl px-6 pb-5 border-b-[15px]">
 			A good father , husbend (trying) and developer want to keep a good infact on earth. 
 		</p>
 
-		<div class="dividedLine" />
+		<section class="px-6">
+			<div class="mt-7">
+				<p class="text-xl">Find me on,</p>
+				<ul class="flex gap-x-3 mt-3">
+					<li>
+						<a>Email</a>
+					</li>
+					<li>
+						<a>Twitter</a>
+					</li>
+					<li>
+						<a>Facebook</a>
+					</li>
+				</ul>
+			</div>
 
-		<div class="socialLinks">
-			<p>Find me on,</p>
-			<ul>
-				<li>
-					<a>Email</a>
-				</li>
-				<li>
-					<a>Twitter</a>
-				</li>
-				<li>
-					<a>Facebook</a>
-				</li>
-			</ul>
-		</div>
-			
-		<Footer />
+			<div class="mt-9">
+				<div class="flex justify-between">
+					<h4>Checkout my blogs</h4>
+					<button>All Blogs</button>
+				</div>
+				<div class="grid-cols-1">
+					{mockBlogsList.map(blog=>(
+						<div>
+							<h3>{blog.title}</h3>
+							<p>{blog.content}</p>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<TimeWast />
+				
+			<Footer />
+		</section>
 	</body>
 </html>
