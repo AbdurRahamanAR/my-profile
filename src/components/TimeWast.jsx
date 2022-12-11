@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function TimeWast() {
-  return <div>TimeWest</div>;
+  return (
+    <div>
+      <h1>Time Wast</h1>
+    </div>
+  );
 }

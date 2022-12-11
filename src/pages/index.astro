@@ -52,7 +52,7 @@ const mockBlogsList =[1, 2, 3].map(item=>({
 						<a>Twitter</a>
 					</li>
 					<li>
-						<a>Facebook</a>
+						<a>Github</a>
 					</li>
 				</ul>
 			</div>
@@ -60,13 +60,13 @@ const mockBlogsList =[1, 2, 3].map(item=>({
 			<div class="mt-9">
 				<div class="flex justify-between">
 					<h4>Checkout my blogs</h4>
-					<button>All Blogs</button>
+					<a href="/blog">All Blogs</a>
 				</div>
-				<div class="grid-cols-1">
+				<div class="mt-5">
 					{mockBlogsList.map(blog=>(
-						<div>
-							<h3>{blog.title}</h3>
-							<p>{blog.content}</p>
+						<div class="mt-5">
+							<h5 class="text-xl">{blog.title}</h5>
+							<p class="mt-3">{blog.content}</p>
 						</div>
 					))}
 				</div>
